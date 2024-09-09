@@ -12,22 +12,17 @@ body{
 
 .main{
     display: flex;
-    flex: 1;
+    flex-direction: column;
 }
 
 .main > .container{
-    flex: 1;
+    /* flex: 1; */
     order: 1;
-    background-color: #283618;
-}
-
-.main > article,
-.main > aside{
-    flex: 0 0 20vw;
+    background-color: #fafac6;
 }
 
 .main > article {
-    background-color: #BC6C25;
+    background-color: #f8fff4;
     order: 2;
 }
 
@@ -40,6 +35,8 @@ body{
 }
 .footer {
     min-height: 200px;
+    background-color: #474350;
+    color: white;
 }
 
 .logo {
@@ -69,7 +66,7 @@ body{
     display: block;
 }
 .sactive{
-    background-color: #fafac6;
+    background-color: black;
 }
 .sactive > a{
     background-color: crimson;
@@ -104,13 +101,49 @@ body{
     text-decoration: none;
 }
 .navItem a:hover {
-    /* background-color: black; */
+    background-color: black;
     color: white;
 }
+.main > * {
+    padding: 10px;
+}
+.main h2 {
+    display: block;
+    background-color: #474350;
+    color: white;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+}
+.footer{
+    padding: 20px;
+    text-align: center;
+}
+.main img{
+    max-width: 100%;
+    margin: auto;
+    padding: 5px;
+    background-color: white;
+    text-align: center;
+    display: block;
+}
+
 
 @media all and (min-width:960px) {
-    .footer{
+    .main {
+        flex: 1;
+        flex-direction: row;
+    }
+    .main > .container{
+        flex: 1;
+        order: 1;
         background-color: #fafac6;
+    }
+    
+    .main > article,
+    .main > aside{
+        flex: 0 0 20vw;
     }
     .sactive .subNav{
         display: block;
